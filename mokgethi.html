@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  color: aliceblue;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #55555595;
+  color: rgba(255, 255, 255, 0.651);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #77777754;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("file:///C:/Users/phomelelo/Pictures/phomelelograd.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'black')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'black')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'black')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'black')">About</button>
+
+<div id="Home" class="tabcontent">
+    <h2 style="text-align:center">Mokgethi Phomelelo Lekgau  </h2>
+  
+  
+  <style>
+    body{
+        background-image: url("./images/my land.jpg");
+        background-repeat:  repeat;
+        height: 5px;
+        background-position: center; 
+        background-size: cover;
+  position: relative;
+
+    }
+</style>
+
+  
+
+</div>
+
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact me on</h1>
+  <p>cell no: 0614387355</p>
+  
+
+
+
+
+  <div style="margin: 24px 0;">
+     
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  
+</div>
+
+<div id="About" class="tabcontent">
+   
+  <h3>About</h3>
+  <p>I recently graduated at Tshwane University of Technology</p>
+  <p>where I studied Information Technology (software Development)</p>
+  <p>I am therefore looking Forward to grawing in the IT field</p>
+  <p>I am always willing to learn and I am coachable</p>
+
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
